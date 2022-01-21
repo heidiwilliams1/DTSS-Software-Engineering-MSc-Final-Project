@@ -1,12 +1,18 @@
 import './App.css';
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import NavBar from "./components/NavBar"
+import Pitch from "./components/Pitch"
+import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Title</h1>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header/>
+      <NavBar/>
+      <Pitch/>
+      <Footer/>
+    </React.Fragment>
   );
 }
 
