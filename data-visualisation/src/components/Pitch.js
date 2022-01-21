@@ -1,9 +1,13 @@
-import React from 'react'
-
- class Pitch extends React.Component {
-    render() {
-      return <h1>Pitch</h1>;
-    }
+import React from "react";
+import { ReactComponent as PitchSvg } from "../assets/pitch.svg";
+class Pitch extends React.Component {
+  render() {
+    return (
+      <div className="pitch">
+        <PitchSvg />
+      </div>
+    );
   }
+}
 
-export default Pitch
+export default Pitch;

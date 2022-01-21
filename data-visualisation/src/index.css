@@ -1,13 +1,118 @@
+:root {
+  --margin: 10px;
+  --padding: 10px;
+  --grey: rgb(167, 167, 167);
+  --blue: rgb(34, 55, 174);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.eventHeader {
+  text-align: center;
+  background-color: rgb(34, 55, 174);
+  padding: var(--padding);
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: var(--padding);
+  border-top-style: solid;
+  border-color: var(--grey);
+}
+
+footer .row {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerLinks {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  flex-wrap: wrap-reverse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerLinks li:last-child {
+  border-right: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerLinks li a {
+  font-size: 0.8rem;
+  width: 100%;
+  display: inline-block;
+  padding: 5px 5px;
+  text-decoration: none;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  margin: var(--margin);
+}
+
+.footerLinks li a:hover {
+  text-decoration: underline;
+}
+
+.navBar {
+  display: flexbox;
+  text-decoration: none;
+  font-weight: bolder;
+  overflow: hidden;
+
+  text-align: center;
+  background-color: var(--blue);
+  border-top-style: solid;
+  border-top-color: rgb(110, 124, 203);
+  border-bottom-style: solid;
+  border-bottom-color: rgb(110, 124, 203);
+}
+
+.navBar a {
+  float: left;
+  display: flexbox;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.navBar a:hover {
+  color: var(--grey);
+}
+
+.pitch {
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue);
+  padding: var(--padding);
+}
+
+.bettingMarkets {
+  text-align: center;
 }

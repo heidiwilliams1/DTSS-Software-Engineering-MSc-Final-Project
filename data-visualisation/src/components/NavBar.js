@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
 
- class NavBar extends React.Component {
-    render() {
-      return <h1>NavBar</h1>;
-    }
+class NavBar extends React.Component {
+  render() {
+    return (
+      <div className="navBar">
+        <a href=""> Pitch </a>
+        <a href=""> Stats </a>
+        <a href=""> Line-ups </a>
+        <a href=""> Player Stats </a>
+      </div>
+    );
   }
+}
 
-export default NavBar
+export default NavBar;
