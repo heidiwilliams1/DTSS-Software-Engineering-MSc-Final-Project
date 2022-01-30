@@ -1,19 +1,16 @@
 import React from "react";
-import {Header, Footer, NavBar, Pitch, BettingMarkets} from "../components";
-import { ApolloProvider } from '@apollo/client';
-import { client } from "./BettingMarkets"
+import {Header, Footer, NavBar, Pitch, BettingMarkets, Data} from "../components";
 
 function App() {
   return (
-    <ApolloProvider client={client}>
     <React.Fragment>
       <Header />
       <NavBar />
       <Pitch />
+      <Data />
       <BettingMarkets />
       <Footer />
     </React.Fragment>
-    </ApolloProvider>
   );
 }
 
