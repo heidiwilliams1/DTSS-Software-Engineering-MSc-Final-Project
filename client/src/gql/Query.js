@@ -1,13 +1,17 @@
 import { gql } from "@apollo/client";
 
-export const GET_GEN_3 = gql`
-  query getGen3 {
-    pokemon_v2_pokemonspecies(
-      order_by: { id: asc }
-      where: { pokemon_v2_generation: { name: { _eq: "generation-iii" } } }
-    ) {
-      name
-      id
+export const GET_EVENT_DATA = gql`
+  query FMD {
+    match(matchCid: "runningball-adaptor-9791334") {
+      ballLocation @order(by: "clockTime", direction: ASC) {
+        eventType
+        association
+        clockTime
+        coordinates {
+          x
+          y
+        }
+      }
     }
   }
 `;
