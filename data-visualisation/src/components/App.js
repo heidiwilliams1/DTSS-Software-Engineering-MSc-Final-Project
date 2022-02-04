@@ -5,7 +5,7 @@ import {
   NavBar,
   Pitch,
   BettingMarkets,
-  Data,
+  Graph,
 } from "../components";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Header />
       <NavBar />
       <Pitch />
-      <Data />
+      <Graph />
       <BettingMarkets />
       <Footer />
     </React.Fragment>
