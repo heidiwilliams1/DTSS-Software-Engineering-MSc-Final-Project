@@ -1,5 +1,12 @@
 import React from "react";
-import {Header, Footer, NavBar, Pitch, BettingMarkets, Data} from "../components";
+import {
+  Header,
+  Footer,
+  NavBar,
+  Pitch,
+  BettingMarkets,
+  Data,
+} from "../components";
 
 function App() {
   return (
