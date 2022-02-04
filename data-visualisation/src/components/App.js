@@ -5,6 +5,7 @@ import {
   NavBar,
   Pitch,
   BettingMarkets,
+  Data,
   Graph,
 } from "../components";
 
@@ -15,6 +16,7 @@ function App() {
       <NavBar />
       <Pitch />
       <Graph />
+      <Data />
       <BettingMarkets />
       <Footer />
     </React.Fragment>

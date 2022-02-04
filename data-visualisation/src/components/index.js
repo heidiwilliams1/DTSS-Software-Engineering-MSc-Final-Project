@@ -4,3 +4,4 @@ export { default as NavBar } from "./NavBar";
 export { default as Pitch } from "./Pitch";
 export { default as BettingMarkets } from "./BettingMarkets";
 export { default as Graph } from "./Graph";
+export { default as Data } from "./Data";
