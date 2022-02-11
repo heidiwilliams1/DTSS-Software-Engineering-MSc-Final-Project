@@ -4,7 +4,7 @@ import { Data } from "../components";
 class Pitch extends React.Component {
   render() {
     return (
-      <div>
+      <div className="pitchContainer">
         <div className="dataNav">
           <a> Pitch</a>
           <a className="freeKickTab"> Free Kicks</a>

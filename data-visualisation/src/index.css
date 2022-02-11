@@ -1,8 +1,8 @@
 :root {
   --margin: 10px;
   --padding: 10px;
-  --grey: rgb(167, 167, 167);
-  --blue: rgb(34, 55, 174);
+  --grey: #a7a7a7;
+  --blue: #163272;
 }
 
 body {
@@ -21,20 +21,29 @@ code {
 
 .eventHeader {
   text-align: center;
-  background-color: rgb(34, 55, 174);
+  background-color: var(--blue);
   padding: var(--padding);
   color: white;
 }
 
+.homeTeam {
+  color: orange;
+}
+
+.awayTeam {
+  color: pink;
+}
+
 .footer {
   text-align: center;
-  /* position: absolute; */
+  /* position: absolute;
   left: 0;
   bottom: 0;
-  right: 0;
+  right: 0; */
   padding: var(--padding);
   border-top-style: solid;
   border-color: var(--grey);
+  margin-top: 10px;
 }
 
 footer .row {
@@ -77,18 +86,16 @@ footer .row {
 
 .navBar {
   display: flex;
-  justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
+  justify-content: space-around;
   text-decoration: none;
   font-weight: bolder;
   overflow: hidden;
   text-align: center;
   background-color: var(--blue);
   border-top-style: solid;
-  border-top-color: rgb(110, 124, 203);
+  border-top-color: rgb(54, 68, 147);
   border-bottom-style: solid;
-  border-bottom-color: rgb(110, 124, 203);
+  border-bottom-color: rgb(54, 68, 147);
 }
 
 .navBar a {
@@ -104,13 +111,22 @@ footer .row {
   color: var(--grey);
 }
 
+.pitchContainer {
+  background: linear-gradient(
+    307.23deg,
+    #1a3980 -11.33%,
+    #163272 10.88%,
+    #0f2558 35.39%,
+    #071947 110.81%
+  );
+}
+
 .dataNav {
   display: flex;
   text-decoration: none;
   overflow: hidden;
   text-align: center;
   justify-content: center;
-  background-color: var(--blue);
   border-bottom-color: rgb(110, 124, 203);
   color: white;
 }
@@ -138,7 +154,13 @@ footer .row {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--blue);
+  background: linear-gradient(
+    307.23deg,
+    #1a3980 -11.33%,
+    #163272 10.88%,
+    #0f2558 35.39%,
+    #071947 110.81%
+  );
   padding: var(--padding);
 }
 
@@ -154,4 +176,35 @@ footer .row {
 
 .bettingMarkets {
   text-align: center;
+}
+
+.market {
+  padding: 5px;
+  font-weight: bold;
+  background-color: var(--blue);
+  color: white;
+  border: solid 1px black;
+}
+
+.outcomes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.outcome {
+  padding: 20px;
+  border: solid 1px black;
+  width: 100%;
+  height: 100%;
+}
+
+.outcomes div:hover {
+  background-color: rgb(228, 229, 232);
+}
+
+.marketRules {
+  padding: 10px;
+  text-align: left;
+  font-size: 12px;
 }

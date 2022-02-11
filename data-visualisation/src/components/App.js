@@ -7,7 +7,6 @@ function App() {
       <Header />
       <NavBar />
       <Pitch />
-      {/* <Data /> */}
       <BettingMarkets />
       <Footer />
     </React.Fragment>

@@ -28,12 +28,14 @@ function Data() {
         coordinatesListHome.push({
           x: event.coordinates.x,
           y: event.coordinates.y,
+          time: event.clockTime,
         });
       }
       if (event.eventType === "FREE_KICK" && event.association === "AWAY") {
         coordinatesListAway.push({
           x: event.coordinates.x,
           y: event.coordinates.y,
+          time: event.clockTime,
         });
       }
     });
@@ -63,12 +65,12 @@ function Data() {
         <Scatter
           name="Home free kicks"
           data={coordinatesListHome}
-          fill="orange"
+          fill="pink"
         />
         <Scatter
           name="Home free kicks"
           data={coordinatesListAway}
-          fill="blue"
+          fill="orange"
         />
       </ScatterChart>
     </div>
