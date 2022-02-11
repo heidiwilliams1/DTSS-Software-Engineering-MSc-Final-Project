@@ -1,6 +1,14 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { GET_EVENT_DATA } from "../fmd/query";
+import {
+  ScatterChart,
+  Scatter,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+} from "recharts";
 
 function Data() {
   const { data } = useQuery(
@@ -9,36 +17,60 @@ function Data() {
     //   pollInterval: 500,
     // }
   );
-  console.log(data);
 
-  let coordinatesList = [];
+  let coordinatesListHome = [];
+  let coordinatesListAway = [];
+
+  if (data) {
+    console.log(data);
+    data.match.ballLocation.map((event) => {
+      if (event.eventType === "FREE_KICK" && event.association === "HOME") {
+        coordinatesListHome.push({
+          x: event.coordinates.x,
+          y: event.coordinates.y,
+        });
+      }
+      if (event.eventType === "FREE_KICK" && event.association === "AWAY") {
+        coordinatesListAway.push({
+          x: event.coordinates.x,
+          y: event.coordinates.y,
+        });
+      }
+    });
+
+    console.log(coordinatesListHome);
+    console.log(coordinatesListAway);
+  }
 
   return (
-    <div>
-      {data === undefined ? (
-        <p>Error</p>
-      ) : (
-        <div>
-          {data.match.ballLocation.map((event, i) => {
-            if (event.eventType === "FREE_KICK") {
-              coordinatesList.push({
-                x: event.coordinates.x,
-                y: event.coordinates.y,
-              });
-            }
-            console.log(coordinatesList);
-
-            return (
-              <p key={i}>
-                {/* {event.eventType.toLowerCase()}{" "}
-                {event.association.toLowerCase()} ({event.coordinates.x}
-                {", "}
-                {event.coordinates.y}) */}
-              </p>
-            );
-          })}
-        </div>
-      )}{" "}
+    <div className="graph">
+      <ScatterChart
+        class="graph"
+        width={470}
+        height={270}
+        margin={{
+          top: 20,
+          right: 20,
+          bottom: 20,
+          left: 20,
+        }}
+      >
+        {" "}
+        <CartesianGrid />
+        <XAxis type="number" dataKey="x" name="x" unit="" tick={false} />
+        <YAxis type="number" dataKey="y" name="y" unit="" tick={false} />
+        <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+        <Scatter
+          name="Home free kicks"
+          data={coordinatesListHome}
+          fill="orange"
+        />
+        <Scatter
+          name="Home free kicks"
+          data={coordinatesListAway}
+          fill="blue"
+        />
+      </ScatterChart>
     </div>
   );
 }

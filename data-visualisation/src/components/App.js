@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Header,
-  Footer,
-  NavBar,
-  Pitch,
-  BettingMarkets,
-  Data,
-  Graph,
-} from "../components";
+import { Header, Footer, NavBar, Pitch, BettingMarkets } from "../components";
 
 function App() {
   return (
@@ -15,8 +7,7 @@ function App() {
       <Header />
       <NavBar />
       <Pitch />
-      <Graph />
-      <Data />
+      {/* <Data /> */}
       <BettingMarkets />
       <Footer />
     </React.Fragment>

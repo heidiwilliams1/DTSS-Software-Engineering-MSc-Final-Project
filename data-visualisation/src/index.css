@@ -76,11 +76,13 @@ footer .row {
 }
 
 .navBar {
-  display: flexbox;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
   text-decoration: none;
   font-weight: bolder;
   overflow: hidden;
-
   text-align: center;
   background-color: var(--blue);
   border-top-style: solid;
@@ -102,15 +104,52 @@ footer .row {
   color: var(--grey);
 }
 
+.dataNav {
+  display: flex;
+  text-decoration: none;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--blue);
+  border-bottom-color: rgb(110, 124, 203);
+  color: white;
+}
+
+.dataNav a {
+  float: left;
+  display: flex;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.dataNav a:hover {
+  color: var(--grey);
+}
+
+.dataNav .freeKickTab {
+  text-decoration: underline;
+}
+
 .pitch {
   left: 0;
   right: 0;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   background-color: var(--blue);
   padding: var(--padding);
+}
+
+.pitchSvg {
+  width: 370px;
+}
+
+.graph {
+  position: absolute;
+  margin-top: 28px;
+  margin-right: 58px;
 }
 
 .bettingMarkets {
