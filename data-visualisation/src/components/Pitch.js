@@ -1,20 +1,36 @@
 import React from "react";
 import { ReactComponent as PitchSvg } from "../assets/pitch.svg";
 import { Data } from "../components";
+import { Tabs } from "./StatsNavTabs";
+
 class Pitch extends React.Component {
   render() {
     return (
       <div className="pitchContainer">
-        <div className="dataNav">
-          <a> Pitch</a>
-          <a className="freeKickTab"> Free Kicks</a>
-          <a> Shots</a>
-          <a> Cards</a>
-        </div>
-        <div className="pitch">
-          <PitchSvg className="pitchSvg" />
-          <Data className="graph" />
-        </div>
+        <Tabs>
+          <div label="Pitch">
+            <div className="pitchVis">
+            <PitchSvg className="pitchSvg" />
+            <div className="pitchText">Current Pitch Visualisation</div> 
+            </div>
+          </div>
+          <div label="Free Kicks">
+            <div className="freeKickData">
+              <PitchSvg className="pitchSvg" />
+              <Data className="graph" />
+            </div>
+          </div>
+          <div label="Shots">
+            <div className="shotsData">
+              <PitchSvg className="pitchSvg" />
+            </div>
+          </div>
+          <div label="Cards">
+            <div className="cardsData">
+              <PitchSvg className="pitchSvg" />
+            </div>
+          </div>
+        </Tabs>
       </div>
     );
   }

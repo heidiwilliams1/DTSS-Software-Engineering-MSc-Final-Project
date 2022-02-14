@@ -121,34 +121,7 @@ footer .row {
   );
 }
 
-.dataNav {
-  display: flex;
-  text-decoration: none;
-  overflow: hidden;
-  text-align: center;
-  justify-content: center;
-  border-bottom-color: rgb(110, 124, 203);
-  color: white;
-}
-
-.dataNav a {
-  float: left;
-  display: flex;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  color: white;
-}
-
-.dataNav a:hover {
-  color: var(--grey);
-}
-
-.dataNav .freeKickTab {
-  text-decoration: underline;
-}
-
-.pitch {
+.freeKickData {
   left: 0;
   right: 0;
   display: flex;
@@ -172,6 +145,39 @@ footer .row {
   position: absolute;
   margin-top: 28px;
   margin-right: 58px;
+}
+
+.pitchVis {
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.pitchText {
+  position: absolute;
+  color: white;
+  text-decoration: bold;
+}
+
+.shotsData{
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.cardsData {
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
 }
 
 .bettingMarkets {
@@ -207,4 +213,34 @@ footer .row {
   padding: 10px;
   text-align: left;
   font-size: 12px;
+}
+
+.tab-list {
+  display: flex;
+  text-decoration: none;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  border-bottom-color: rgb(110, 124, 203);
+  color: white;
+  margin: 0;
+  padding: 10px;
+}
+
+.tab-list li:hover {
+  color: var(--grey);
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+    padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+  background-color: white;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+  color: var(--blue);
+  border-radius: 5px;
 }
