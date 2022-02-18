@@ -3,7 +3,7 @@ import React from "react";
 class BettingMarkets extends React.Component {
   render() {
     return (
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center" }} data-testid="betting-markets">
         <div className="marketRules">
           {" "}
           Bets placed in accordance with our{" "}

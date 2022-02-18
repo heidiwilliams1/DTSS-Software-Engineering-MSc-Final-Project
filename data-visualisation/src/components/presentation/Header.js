@@ -2,7 +2,7 @@ import React from "react";
 class Header extends React.Component {
   render() {
     return (
-      <div className="eventHeader">
+      <div className="eventHeader" data-testid="header">
         <h1 className="header">In-Play Football</h1>
         <h2 className="teamNames">
           {" "}

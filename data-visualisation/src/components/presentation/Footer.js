@@ -3,27 +3,27 @@ import React from "react";
 class Footer extends React.Component {
   render() {
     return (
-      <footer className="footer">
+      <footer className="footer" data-testid="footer">
         <div className="row">
           <ul className="footerLinks">
             <li>
-              <a href="">Terms and Conditions</a>
+              <a>Terms and Conditions</a>
             </li>
             <li>
-              <a href="">Help</a>
+              <a>Help</a>
             </li>
             <li>
-              <a href="">Legal Information</a>
+              <a>Legal Information</a>
             </li>
             <li>
-              <a href="">Privacy and Cookies</a>
+              <a>Privacy and Cookies</a>
             </li>
           </ul>
         </div>
         <div className="row">
           <ul className="footerLinks">
             <li>
-              <a href=""> Committed to Safer Gambling</a>
+              <a> Committed to Safer Gambling</a>
             </li>
           </ul>
         </div>

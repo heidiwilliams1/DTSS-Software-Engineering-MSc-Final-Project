@@ -1,13 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Header, Footer, NavBar, BettingMarkets } from "../presentation";
 import { Pitch } from "../pitch";
-import Push from "../../push/Push";
 
 function App() {
-  useEffect(() => {
-    new Push("10be28ef-f8e1-4927-94e0-4b9f12e38825");
-  }, []);
-
   return (
     <React.Fragment>
       <Header />

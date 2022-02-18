@@ -6,11 +6,11 @@ import { Tabs } from "../statsNavTabs";
 class Pitch extends React.Component {
   render() {
     return (
-      <div className="pitchContainer">
+      <div className="pitchContainer" data-testid="pitch">
         <Tabs>
           <div label="Pitch">
             <div className="pitchVis">
-              <PitchSvg className="pitchSvg" />
+              <PitchSvg className="pitchSvg" data-testid="pitch-svg" />
               <div className="pitchText">Current Pitch Visualisation</div>
             </div>
           </div>
@@ -26,13 +26,13 @@ class Pitch extends React.Component {
               <Graph eventType="OFFSIDE" className="graph" />
             </div>
           </div>
-          <div label="Red cards">
+          <div label="Red Cards">
             <div className="data">
               <PitchSvg className="pitchSvg" />
               <Graph eventType="RED_CARD" className="graph" />
             </div>
           </div>
-          <div label="Yellow cards">
+          <div label="Yellow Cards">
             <div className="data">
               <PitchSvg className="pitchSvg" />
               <Graph eventType="YELLOW_CARD" className="graph" />
