@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import { Header, Footer, NavBar, Pitch, BettingMarkets } from "../components";
-import Push from "../push/Push";
+import { Header, Footer, NavBar, BettingMarkets } from "../presentation";
+import { Pitch } from "../pitch";
+import Push from "../../push/Push";
 
 function App() {
   useEffect(() => {

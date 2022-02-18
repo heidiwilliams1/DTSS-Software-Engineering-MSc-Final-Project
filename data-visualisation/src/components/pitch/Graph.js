@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import getEventData from "../fmd/getData";
+import getEventData from "../../fmd/getData";
 
 import {
   ScatterChart,
