@@ -134,7 +134,7 @@ footer .row {
     #0f2558 35.39%,
     #071947 110.81%
   );
-  padding: var(--padding);
+  padding-bottom: 10px;
 }
 
 .pitchSvg {
@@ -162,7 +162,7 @@ footer .row {
   text-decoration: bold;
 }
 
-.shotsData{
+.shotsData {
   left: 0;
   right: 0;
   display: flex;
@@ -234,7 +234,7 @@ footer .row {
 .tab-list-item {
   display: inline-block;
   list-style: none;
-    padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem;
 }
 
 .tab-list-active {

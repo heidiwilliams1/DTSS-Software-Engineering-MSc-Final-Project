@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
-import { GET_EVENT_DATA } from "../fmd/query";
+import { GET_EVENT_DATA } from "../../fmd/query";
 import {
   ScatterChart,
   Scatter,
@@ -10,13 +10,8 @@ import {
   Tooltip,
 } from "recharts";
 
-function Data() {
-  const { data } = useQuery(
-    GET_EVENT_DATA
-    //   , {
-    //   pollInterval: 500,
-    // }
-  );
+function Goals() {
+  const { data } = useQuery(GET_EVENT_DATA);
 
   let coordinatesListHome = [];
   let coordinatesListAway = [];
@@ -24,14 +19,14 @@ function Data() {
   if (data) {
     console.log(data);
     data.match.ballLocation.map((event) => {
-      if (event.eventType === "FREE_KICK" && event.association === "HOME") {
+      if (event.eventType === "GOAL" && event.association === "HOME") {
         coordinatesListHome.push({
           x: event.coordinates.x,
           y: event.coordinates.y,
           time: event.clockTime,
         });
       }
-      if (event.eventType === "FREE_KICK" && event.association === "AWAY") {
+      if (event.eventType === "GOAL" && event.association === "AWAY") {
         coordinatesListAway.push({
           x: event.coordinates.x,
           y: event.coordinates.y,
@@ -65,16 +60,16 @@ function Data() {
         <Scatter
           name="Home free kicks"
           data={coordinatesListHome}
-          fill="pink"
+          fill="orange"
         />
         <Scatter
           name="Home free kicks"
           data={coordinatesListAway}
-          fill="orange"
+          fill="pink"
         />
       </ScatterChart>
     </div>
   );
 }
 
-export default Data;
+export default Goals;
