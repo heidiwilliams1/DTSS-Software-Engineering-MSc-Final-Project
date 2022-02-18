@@ -20,16 +20,22 @@ class Pitch extends React.Component {
               <Graph eventType="FREE_KICK" className="graph" />
             </div>
           </div>
-          <div label="Offside">
+          <div label="Offsides">
             <div className="data">
               <PitchSvg className="pitchSvg" />
               <Graph eventType="OFFSIDE" className="graph" />
             </div>
           </div>
-          <div label="Cards">
+          <div label="Red cards">
             <div className="data">
               <PitchSvg className="pitchSvg" />
               <Graph eventType="RED_CARD" className="graph" />
+            </div>
+          </div>
+          <div label="Yellow cards">
+            <div className="data">
+              <PitchSvg className="pitchSvg" />
+              <Graph eventType="YELLOW_CARD" className="graph" />
             </div>
           </div>
         </Tabs>
