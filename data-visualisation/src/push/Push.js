@@ -10,7 +10,6 @@ class Push {
     this.eventId = eventId;
     this.messageParser = new MessageParser();
 
-    console.log("hello");
     this.socket = io("wss://2.push.test4.skybet.com:8443/", {
       secure: true,
       forceNew: true,

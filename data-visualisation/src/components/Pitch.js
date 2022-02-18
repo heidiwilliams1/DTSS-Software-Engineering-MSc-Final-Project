@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as PitchSvg } from "../assets/pitch.svg";
-import { FreeKicks, Cards, Goals } from "./Graphs";
+import { Graph } from "../components";
 import { Tabs } from "./StatsNavTabs";
 
 class Pitch extends React.Component {
@@ -15,21 +15,21 @@ class Pitch extends React.Component {
             </div>
           </div>
           <div label="Free Kicks">
-            <div className="freeKickData">
+            <div className="data">
               <PitchSvg className="pitchSvg" />
-              <FreeKicks className="graph" />
+              <Graph eventType="FREE_KICK" className="graph" />
             </div>
           </div>
-          <div label="Goals">
-            <div className="shotsData">
+          <div label="Offside">
+            <div className="data">
               <PitchSvg className="pitchSvg" />
-              <Goals className="graph" />
+              <Graph eventType="OFFSIDE" className="graph" />
             </div>
           </div>
           <div label="Cards">
-            <div className="cardsData">
+            <div className="data">
               <PitchSvg className="pitchSvg" />
-              <Cards className="graph" />
+              <Graph eventType="RED_CARD" className="graph" />
             </div>
           </div>
         </Tabs>
