@@ -9,10 +9,12 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  ZAxis,
 } from "recharts";
 
 function Graph(props) {
-  const data = getEventData(props.eventType);
+  const homeData = getEventData(props.eventType, "HOME");
+  const awayData = getEventData(props.eventType, "AWAY");
 
   return (
     <div className="graph">
@@ -31,8 +33,10 @@ function Graph(props) {
         <CartesianGrid />
         <XAxis type="number" dataKey="x" name="x" unit="" tick={false} />
         <YAxis type="number" dataKey="y" name="y" unit="" tick={false} />
+        <ZAxis type="number" dataKey="time" name="time" unit="'" tick={false} />
         <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-        <Scatter name="Home free kicks" data={data} fill="orange" />
+        <Scatter name="Home Data" data={homeData} fill="orange" />
+        <Scatter name="Away Data" data={awayData} fill="pink" />
       </ScatterChart>
     </div>
   );
