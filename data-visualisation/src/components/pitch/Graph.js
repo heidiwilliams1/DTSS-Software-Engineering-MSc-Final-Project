@@ -15,7 +15,7 @@ import {
 
 function Graph(props) {
   useEffect(() => {
-    new Push("10be28ef-f8e1-4927-94e0-4b9f12e38825");
+    new Push("2385641");
   }, []);
 
   const homeData = getEventData(props.eventType, "HOME");

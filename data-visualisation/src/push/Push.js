@@ -43,7 +43,12 @@ class Push {
   subscribe = () => {
     console.log(`Subscribing to event: ${this.eventId}`);
     this.socket.emit("subscribe", {
-      keys: [`${this.eventId}.BallLocation`, `e.2238110`, `sc.2238110`],
+      keys: [
+        `${this.eventId}.BallLocation`,
+        `${this.eventId}.RedCard`,
+        `${this.eventId}.YellowCard`,
+        `sc.2385641`,
+      ],
       url: `/football/football-live/event/${this.eventId}`,
     });
   };
