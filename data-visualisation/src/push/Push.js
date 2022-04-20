@@ -19,10 +19,6 @@ class Push {
     this.socket.on("push", (data) => {
       const message = this.messageParser.parseMessage(data);
       console.log(message);
-      if (message.type === "scoreboard") {
-        console.log("Received Scoreboard Notification...");
-        this.handleScoreboardNotification(data);
-      }
     });
 
     this.socket.on("connect", () => {
@@ -36,10 +32,7 @@ class Push {
     });
   }
 
-  handleScoreboardNotification = (message) => {
-    console.log(message);
-  };
-
+  // Ball Location includes offsides and free kicks
   subscribe = () => {
     console.log(`Subscribing to event: ${this.eventId}`);
     this.socket.emit("subscribe", {
@@ -47,7 +40,6 @@ class Push {
         `${this.eventId}.BallLocation`,
         `${this.eventId}.RedCard`,
         `${this.eventId}.YellowCard`,
-        `sc.29272235`,
       ],
       url: `/football/football-live/event/${this.eventId}`,
     });
