@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import getEventData from "../../fmd/getData";
 import Push from "../../push/Push";
-
 import {
   ScatterChart,
   Scatter,
@@ -15,7 +14,7 @@ import {
 
 function Graph(props) {
   useEffect(() => {
-    new Push("2385641");
+    new Push(29272235);
   }, []);
 
   const homeData = getEventData(props.eventType, "HOME");

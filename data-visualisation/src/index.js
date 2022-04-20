@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { App } from "./components/app";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import DataVisualisation from "./DataVisualisation";
 
 const client = new ApolloClient({
   uri: " https://stats.test-aws.test4.skybet.com.sbgorigin.com/fmd/test/graphql",
@@ -12,7 +12,7 @@ const client = new ApolloClient({
 ReactDOM.render(
   <ApolloProvider client={client}>
     <React.StrictMode>
-      <App />
+      <DataVisualisation />
     </React.StrictMode>
   </ApolloProvider>,
   document.getElementById("root")

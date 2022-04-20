@@ -47,7 +47,7 @@ class Push {
         `${this.eventId}.BallLocation`,
         `${this.eventId}.RedCard`,
         `${this.eventId}.YellowCard`,
-        `sc.2385641`,
+        `sc.29272235`,
       ],
       url: `/football/football-live/event/${this.eventId}`,
     });

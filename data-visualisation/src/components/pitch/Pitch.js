@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactComponent as PitchSvg } from "../../assets/pitch.svg";
 import { Graph } from "../pitch";
-import { Tabs } from "../statsNavTabs";
+import { Tabs } from "../navTabs";
 
 class Pitch extends React.Component {
   render() {
