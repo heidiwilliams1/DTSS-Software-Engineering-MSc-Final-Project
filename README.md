@@ -13,6 +13,6 @@ In your terminal run:
 - npm start
 
 The app will launch in your browser. 
-The data is displayed in each coresponding tab - 'Free Kicks', 'Offsides', '
+The data is displayed in each coresponding tab - 'Free Kicks', 'Offsides', 'Red Cards', 'Yellow Cards'
 
 Note: must be connected to the SBG VPN to recieve a response from the FMD API. Otherwise a blank graph will be shown. 
